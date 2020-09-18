@@ -1,6 +1,6 @@
     set nocompatible              " be iMproved, required
-    filetype off                  " required
-    
+    filetype on                 " required
+
     " set the runtime path to include Vundle and initialize
     " set rtp+=$VIM/vimfiles/bundle/Vundle.vim/
     set rtp+=C:/Users/81274/vimfiles/bundle/Vundle.vim
@@ -44,6 +44,33 @@ let g:ycm_min_num_of_chars_for_completion=2                 " 从第2个键入�
 
 set t_Co=256
 set laststatus=2
+
+" 解决中文乱码begin
+set encoding=utf-8
+set fileencodings=utf-8,chinese,latin-1
+if has("win32")
+set fileencoding=chinese
+else
+set fileencoding=utf-8
+endif
+"解决菜单乱码
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+"解决consle输出乱码
+language messages zh_CN.utf-8
+
+set encoding=utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf-8,chinese,cp936
+
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+
+language messages zh_CN.utf-8
+
+
+
 " 使用powerline打过补丁的字体
 let g:airline_powerline_fonts = 1
 " 开启tabline
