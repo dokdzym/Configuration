@@ -303,7 +303,7 @@ set smartindent
 "自动补全
 :inoremap ( ()<ESC>i
 :inoremap ) <c-r>=ClosePair(')')<CR>
-":inoremap { {<CR>}<ESC>O
+:inoremap { {<CR>}<ESC>O
 ":inoremap } <c-r>=ClosePair('}')<CR>
 :inoremap [ []<ESC>i
 :inoremap ] <c-r>=ClosePair(']')<CR>
@@ -317,7 +317,7 @@ function! ClosePair(char)
 	endif
 endfunction
 
-inoremap { {}<Esc>i<CR><Esc>koi<Esc>j<C-S-v><S-%>=j<S-$>xa
+"inoremap { {}<Esc>i<CR><Esc>koi<Esc>j<C-S-v><S-%>=j<S-$>xa
 
     " All of your Plugins must be added before the following line
     " call vundle#end()            " required
